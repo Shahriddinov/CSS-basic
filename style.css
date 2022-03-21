@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: #eee;
+}
+.round {
+  margin: 15px auto 10px auto;
+  font-family: Anton;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  text-transform: uppercase;
+  color: #515055;
+  border-bottom: 6px solid #919095;
+}
+.round span {
+  color: black;
+}
+.showup {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+.showup div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 7px 15px;
+  box-shadow: 5px 5px 5px #cecece, -5px -5px 5px #fff;
+}
+.showup div h2,
+.showup div p,
+.showup .reset-score {
+  color: white;
+  font-family: open sans;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.showup .reset-score {
+  border: none;
+  color: #ddd;
+  background: #313035;
+  border-radius: 6px;
+  padding: 7px 15px;
+  box-shadow: 5px 5px 5px #cecece, -5px -5px 5px #fff;
+  cursor: pointer;
+}
+.showup .reset-score:hover {
+  background: #414045;
+  color: white;
+}
+.showup div p {
+  margin-left: 15px;
+  font-weight: 600;
+}
+.showup .box-win {
+  background: green;
+}
+.showup .box-draw {
+  background: yellow;
+}
+.showup .box-draw h2,
+.showup .box-draw p {
+  color: black;
+}
+.showup .box-fail {
+  background: red;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.container div {
+  width: 200px;
+  height: 200px;
+  font-size: 35px;
+  display: grid;
+  place-items: center;
+  font-family: Anton;
+  margin: 1% 3%;
+  border-radius: 4px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+  background-position: center !important;
+  background-size: cover !important;
+  transition: 0.4s;
+}
+.container div:hover {
+  background: rgba(0, 200, 255, 0.1);
+}
+.container div.item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.container div.result {
+  font-size: 40px;
+  padding: 5px;
+}
+.container div.text {
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -2px -2px 2px white, 2px 2px 2px #ccc;
+  -webkit-text-stroke: 0.5px black;
+}
+.container div.result:hover,
+.container div.text:hover {
+  background: transparent;
+}
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  pointer-events: none;
+  z-index: 100;
+}
+@media (max-width: 550px) {
+  .showup {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .showup div {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .container div {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 350px) {
+  .container {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container div {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+  }
+}
